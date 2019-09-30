@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+const int c1 = 123;
+const int c2 = 200;
+int sum, i, i1 = 432, i2, i3 = i1, i4, i5, i6, i7;
+int a1[6];
+
+int main() {
+	cout << "i1 = " << i1;
+	cin >> i7;		
+	i1 = i2 * 3 + i1 / 2;
+	a1[4] = 100;
+	if (i1 <= i2 + i1)
+		i1 = c1 + 12;
+	else {
+		i3 = 13;
+		i4 = 14;
+	}
+	if (i4 >= 11)
+		while (i5 >= 22 && i6 > 33)
+			i1 = i1 - 66;
+	else if (i4 > 88)
+		i4 = 99;
+	else
+		i4 = 111;
+	if (i <= 225 || sum < 333 && sum > 444 || i3 == 555)
+		sum = 1001;
+	else
+		sum = 1002;
+	a1[4] = 100;
+	i1 = i2 * 3 + i1 / 2
+	cout << "i1 = " << i1;
+	cin >> i7;
+return 0;
+}
+
+
+
+

@@ -1,0 +1,16 @@
+function [w,epochs,Ein,Eout] = LogReg_1(X,y,eta,delta,Xt,yt)
+    w = [0 0];
+    newW = [0 0];
+    notDone = true;
+    
+    while notDone
+       currentPerm = randperm(size(X,1))
+       
+       for i=1:size(currentPerm,1)
+           n = currentPerm(i);
+           newW = (-y(n) * X(n,:)) / (1 + exp(y(n) * newW * X(n,:)'));
+       end
+       
+       
+    end
+end

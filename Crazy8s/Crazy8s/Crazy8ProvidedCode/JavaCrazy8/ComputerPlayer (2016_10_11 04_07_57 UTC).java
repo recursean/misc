@@ -1,0 +1,18 @@
+/**
+ * The computer player.
+ */
+public class ComputerPlayer extends Player {
+  
+  public ComputerPlayer(Deck deck) {
+    super(deck);
+  }
+  
+  /**
+   * Play for the computer. This implementation draws a card every turn.
+   */
+  public void takeATurn(Deck deck, Pile pile) {
+    // Stupid method that always takes a card from the deck
+    list.add(deck.dealACard());
+    System.out.println("Computer now has " + list.size() + " cards.");
+  }
+}
