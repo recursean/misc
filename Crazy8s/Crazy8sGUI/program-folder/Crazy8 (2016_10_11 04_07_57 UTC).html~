@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head> 
+    <meta charset="UTF-8" />
+    <title>
+      Crazy Eights, MVP version
+    </title> 
+    <!-- Model classes -->
+    <script type="text/javascript" src="Card.js">
+    </script>
+    <script type="text/javascript" src="Deck.js">
+    </script>
+    <script type="text/javascript" src="Pile.js">
+    </script>
+    <script type="text/javascript" src="Player.js">
+    </script>
+    <!-- View and Presenter classes -->
+    <script type="text/javascript" src="View.js">
+    </script>
+    <script type="text/javascript" src="Presenter.js">
+    </script>
+    <!-- Main program -->
+    <script type="text/javascript" src="Main.js">
+    </script>
+    <!-- You'll probably want to add one or more style elements. -->
+
+  </head> 
+  <body onload="init();">
+    <div id='compHand' style='position:relative;height:100px'>
+
+
+    </div>
+    <div id='table' style='height:100px'>
+
+    </div>
+    <div id='playerHand' style='position:relative;height:100px'>
+
+    </div>
+    <div id='suitPicker' style='display:none'>
+      <div style='font-size:3em'>
+	&nbsp;&nbsp;&nbsp;&nbsp;CHOOSE A SUIT
+      </div>
+      <span id='clubs' style='font-size:10em;cursor:pointer'>
+	&clubs;
+      </span>
+      <span id='spades' style='font-size:10em;cursor:pointer'>
+	&spades;
+      </span>
+      <span id='hearts' style='font-size:10em;color:'red';cursor:pointer>
+	&hearts;
+      </span>
+      <span id='diamonds' style='font-size:10em;color:'red';cursor:pointer>
+	&diams;
+      </span>
+    </div>
+    
+    
+    <!-- 
+	 You can add div's and whatnot here, as in the 
+	 static page provided.  You might also want to add
+	 a div, initially set to display:none, representing
+	 the suit picker (if you are implementing part (d)).
+	 
+	 However, for full credit, you should not add any HTML
+	 intrinsic event attributes, e.g., onclick.
+      -->
+  </body> 
+</html> 

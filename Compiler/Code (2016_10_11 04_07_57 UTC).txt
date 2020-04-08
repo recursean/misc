@@ -1,0 +1,74 @@
+int i,i1 = 432,i2,i3 = 432,i4,i5,i6,i7,sum,a1[6],c1 = 123,c2 = 200;
+int main(){
+cout << "i1 = ";
+cout << i1;
+cin >> i7;
+i2 * 3 = t_0;
+i1 / 2 = t_1;
+t_0 + t_1 = t_2;
+i1 = t_2;
+t_0 = 4;
+a1[t_0] = 100;
+i2 + i1 = t_1;
+if(i1 <= t_1) goto L_1
+goto L_2
+L_1
+c1 + 12 = t_2;
+i1 = t_2;
+goto L_3
+L_2
+i3 = 13;
+i4 = 14;
+L_3
+if(i4 >= 11) goto L_4
+goto L_5
+L_4
+L_9
+if(i5 >= 22) goto L_10
+goto L_8
+L_10
+if(i6 > 33) goto L_7
+goto L_8
+L_7
+i1 - 66 = t_1;
+i1 = t_1;
+goto L_9
+L_8
+goto L_6
+L_5
+if(i4 > 88) goto L_11
+goto L_12
+L_11
+i4 = 99;
+goto L_13
+L_12
+i4 = 111;
+L_13
+if(i <= 225) goto L_14
+goto L_18
+L_18
+if(sum < 333) goto L_19
+goto L_17
+L_19
+if(sum > 444) goto L_14
+goto L_17
+L_17
+if(i3 == 555) goto L_14
+goto L_15
+L_14
+sum = 1001;
+goto L_16
+L_15
+sum = 1002;
+L_16
+t_0 = 4;
+a1[t_0] = 100;
+i2 * 3 = t_0;
+i1 / 2 = t_1;
+t_0 + t_1 = t_2;
+i1 = t_2;
+cout << "i1 = ";
+cout << i1;
+cin >> i7;
+return 0;
+}

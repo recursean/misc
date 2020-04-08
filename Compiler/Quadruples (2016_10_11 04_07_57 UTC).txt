@@ -1,0 +1,70 @@
+cout	"i1 = "
+cout	i1
+cin	i7
+*	i2	3	t_0
+/	i1	2	t_1
++	t_0	t_1	t_2
+=	t_2		i1
+=	4		t_0
+[]=	100	t_0	a1
++	i2	i1	t_1
+<=	i1	t_1	goto	L_1
+goto	L_2
+L_1
++	c1	12	t_2
+=	t_2		i1
+goto	L_3
+L_2
+=	13		i3
+=	14		i4
+L_3
+>=	i4	11	goto	L_4
+goto	L_5
+L_4
+L_9
+>=	i5	22	goto	L_10
+goto	L_8
+L_10
+>	i6	33	goto	L_7
+goto	L_8
+L_7
+-	i1	66	t_1
+=	t_1		i1
+goto	L_9
+L_8
+goto	L_6
+L_5
+>	i4	88	goto	L_11
+goto	L_12
+L_11
+=	99		i4
+goto	L_13
+L_12
+=	111		i4
+L_13
+<=	i	225	goto	L_14
+goto	L_18
+L_18
+<	sum	333	goto	L_19
+goto	L_17
+L_19
+>	sum	444	goto	L_14
+goto	L_17
+L_17
+==	i3	555	goto	L_14
+goto	L_15
+L_14
+=	1001		sum
+goto	L_16
+L_15
+=	1002		sum
+L_16
+=	4		t_0
+[]=	100	t_0	a1
+*	i2	3	t_0
+/	i1	2	t_1
++	t_0	t_1	t_2
+=	t_2		i1
+cout	"i1 = "
+cout	i1
+cin	i7
