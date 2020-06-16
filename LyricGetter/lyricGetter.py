@@ -156,7 +156,11 @@ def writeToFile(artistObj):
     artistName = artistObj.name.replace('/', '-')
 
     # create new directory using artist name
-    os.mkdir(artistName)
+    try:
+        os.mkdir(artistName)
+    except:
+        # dir already exists
+        pass
 
     for song in artistObj.songs:
         songName = song.name.replace('/', '-')
