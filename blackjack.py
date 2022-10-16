@@ -1,4 +1,6 @@
 import random
+import os
+import json
 from time import sleep
 
 class Card:
@@ -142,6 +144,8 @@ class Game:
 
         self.deck = self.create_deck(4)
 
+        self.read_stats_file()
+
         while True:
             print('Starting round')
             print(f'Cards remaining: {len(self.deck.cards)}\n')
@@ -180,6 +184,7 @@ class Game:
                     self.player_win(True)
 
             self.print_stats()
+            self.write_stats_file()
 
             for card in self.player.hand:
                 self.deck.discard_pile.append(card)
@@ -188,7 +193,7 @@ class Game:
                 self.deck.discard_pile.append(card)
 
             self.player.empty_hand()
-            
+       
             print('Press < enter > to start another round.')
             input()
 
@@ -225,6 +230,7 @@ class Game:
             print('BUST - ', end='')
         print('DEALER WINS *')
         self.dealer.wins = self.dealer.wins + 1
+        self.stats_history['losses'] += 1
 
     def player_win(self, bust):
         print('* ', end='')
@@ -232,11 +238,35 @@ class Game:
             print('BUST - ', end='')
         print('PLAYER WINS *')
         self.player.wins = self.player.wins + 1
+        self.stats_history['wins'] += 1
 
     def print_stats(self):
         print(f'++++++++++++++++++++++++++++++++++')
         print(f'  DEALER wins: {self.dealer.wins}')
         print(f'  PLAYER wins: {self.player.wins}')
+        print(f'                                 ')
+        print(f'  All time wins   : {self.stats_history["wins"]}')
+        print(f'  All time losses : {self.stats_history["losses"]}')
         print(f'++++++++++++++++++++++++++++++++++')
         print()
+
+    def read_stats_file(self):
+        file_path = 'blackjack_stats.json'
+        if os.path.isfile(file_path):
+            with open(file_path, 'r') as f:
+                self.stats_history = json.load(f)
+                
+                print()
+                print(f'++++++++++++++++++++++++++++++++++')
+                print(f'  All time wins   : {self.stats_history["wins"]}')
+                print(f'  All time losses : {self.stats_history["losses"]}')
+                print(f'++++++++++++++++++++++++++++++++++')
+                print()
+        else:
+            self.stats_history = {'wins': 0, 'losses': 0}
+
+    def write_stats_file(self):
+        with open('blackjack_stats.json', 'w') as f:
+            json.dump(self.stats_history, f)
+
 Game()
